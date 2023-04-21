@@ -7,13 +7,13 @@ Modifikasi kode yang ada. Ketika pencet WASD, skor masih jadi 1 2 3 4 secara har
 Program terdiri dari 9 kelas, diantaranya yaitu :
 1. Kelas Controller -> Memiliki kelas Game dan kelas Handler
 2. Kelas Display -> Menampilkan game ke layar (mengatur tampilan)
-3. Kelas Game -> 
+3. Kelas Game -> Memiliki kelas Display dan kelas Handler
 4. Kelas GameInterface -> Memastikan semua fungsi pada kelas tersebut diimplementasikan pada kelas lain
 5. Kelas GameObject -> Menampung semua atribut objek yang terdapat pada game
 6. Kelas Handler -> Penampung semua objek yang akan ditampilkan pada layar
 7. Kelas Obstacle -> Subclass dari GameObject, mewarisi semua method dan atribut dari GameObject
 8. Kelas Player -> Subclass dari GameObject, mewarisi semua method dan atribut dari GameObject
-9. Kelas Synchronization
+9. Kelas Synchronization -> Program utama untuk memulai/menjalankan game
 ## Alur Program
 Pertama akan terdapat 2 objek yang ditampilkan di layar, yaitu objek pemain yang direpresentasikan dengan bentuk lingkaran dan objek rintangan yang direpresentasikan dengan bentuk persegi. Setiap kali user menggerakan objek pemain, maka skor akan terus bertambah, dan apabila user menggerakan objek pemain menghampiri objek rintangan, maka objek rintangan akan berpindah posisi.
 ## Dokumentasi
