@@ -67,11 +67,13 @@ public class Handler implements GameInterface
     }
     
     // Collision handler
-    public void collision(GameObject player, GameObject obstacle){
+    public int collision(GameObject player, GameObject obstacle){
         if (((player.getX() + player.getWidth()) >= obstacle.getX()) && (player.getY()+player.getHeight() >= obstacle.getY()) && (player.getX() <= obstacle.getX() + obstacle.getWidth()) && (player.getY() <= obstacle.getY() + obstacle.getHeight())) {
             obstacle.setX(rand.nextInt(640));
             obstacle.setY(rand.nextInt(480));
+            return 1;
         }
+        return 0;
     }
     
     /**
