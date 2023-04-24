@@ -226,7 +226,13 @@ public class Game extends Canvas implements Runnable
                     obstacle = handler.get(i);
                 }
             }
-            if (player != null && obstacle != null) handler.collision(player, obstacle);
+            
+            // Null check
+            if (player != null && obstacle != null) 
+            {
+                // If the player touches the box object then the score increases
+                if (handler.collision(player, obstacle) == 1) this.score += 5;
+            }
         }
     }
     
