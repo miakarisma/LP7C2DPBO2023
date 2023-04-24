@@ -2,7 +2,14 @@
 ## Janji
 Saya Mia Karisma Haq NIM [2102165] mengerjakan soal Latihan Praktikum-7 dalam mata kuliah DPBO untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin
 ## Deskripsi Program
-Modifikasi kode yang ada. Ketika pencet WASD, skor masih jadi 1 2 3 4 secara hardcode.  Modifikasi skor nya sehingga ketika ganti tombol yang dipencet, skornya selalu bertambah.
+Modifikasi kode yang sudah diberikan, dengan ketentuan sebagai berikut:
+- Pemain mengendalikan bola. Setiap kali bola bergerak, skor pemain bertambah +1.
+- Skor hanya bertambah jika pemain berbelok, bukan bergerak berurutan. Detail:
+  * Saat pertama kali membuka program, pemain bergerak ke arah manapun, skor +1.
+  * Setelah pemain bergerak, dia harus bergerak ke arah lain agar skornya +1. Jika menekan tombol yang sama, skor tetap (+0).
+  <br>Contoh, pemain membuka program, lalu bergerak ke kanan dan berhenti, maka skor bertambah +1. Jika pemain bergerak ke arah atas, bawah, atau kiri, maka skor bertambah +1. Namun, jika pemain bergerak ke kanan lagi, maka skor +0.
+  <br>Bagaimana jika urutannya, kanan - atas - kiri - kanan? Kanan yang kedua tetap +1, karena pergerakan pemain sebelumnya adalah kiri, sehingga tidak dianggap berurutan.
+- [BONUS] Buatlah sistem game yang menambahkan satu kotak atau objek apapun secara acak. Jika pemain menyentuh objek tersebut, skor bertambah +5 atau +10, lalu objek akan berpindah lagi ke posisi lain secara acak.
 ## Desain Program
 Program terdiri dari 9 kelas, diantaranya yaitu :
 1. Kelas Controller -> Memiliki kelas Game dan kelas Handler
@@ -15,7 +22,6 @@ Program terdiri dari 9 kelas, diantaranya yaitu :
 8. Kelas Player -> Subclass dari GameObject, mewarisi semua method dan atribut dari GameObject
 9. Kelas Synchronization -> Program utama untuk memulai/menjalankan game
 ## Alur Program
-Pertama akan terdapat 2 objek yang ditampilkan di layar, yaitu objek pemain yang direpresentasikan dengan bentuk lingkaran dan objek rintangan yang direpresentasikan dengan bentuk persegi. Setiap kali user menggerakan objek pemain, maka skor akan terus bertambah, dan apabila user menggerakan objek pemain menghampiri objek rintangan, maka objek rintangan akan berpindah posisi.
+Pertama akan terdapat 2 objek yang ditampilkan di layar, yaitu objek pemain yang direpresentasikan dengan bentuk lingkaran dan objek rintangan yang direpresentasikan dengan bentuk persegi. Setiap kali user menggerakan objek pemain untuk berbelok, maka skor akan terus bertambah, dan apabila objek pemain menyentuh objek rintangan, maka objek rintangan akan berpindah posisi dan skor objek pemain bertambah 5.
 ## Dokumentasi
-https://user-images.githubusercontent.com/100817609/233703283-42f48e69-359b-4ab0-8e38-97d396a5191d.mp4
-
+https://user-images.githubusercontent.com/100817609/233971625-7837dfab-fa85-46f7-bbd1-9451741ebe14.mp4
